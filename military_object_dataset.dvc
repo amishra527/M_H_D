@@ -1,0 +1,6 @@
+outs:
+- md5: 0ec306c8ff695920b797d0bfd6dcbaf8.dir
+  size: 4185478976
+  nfiles: 52632
+  hash: md5
+  path: military_object_dataset
