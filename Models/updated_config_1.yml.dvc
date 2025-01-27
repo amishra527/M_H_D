@@ -1,0 +1,5 @@
+outs:
+- md5: 64ab80fa473c549938e353dd82033772
+  size: 550
+  hash: md5
+  path: updated_config_1.yml
