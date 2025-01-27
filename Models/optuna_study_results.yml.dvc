@@ -1,5 +1,0 @@
-outs:
-- md5: 0b292a72cd4e74c0a523835aa45d0e37
-  size: 70
-  hash: md5
-  path: optuna_study_results.yml
