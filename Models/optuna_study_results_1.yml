@@ -1,0 +1,5 @@
+batch: 4
+epochs: 20
+imgsz: 480
+lr0: 0.0005859948294259242
+workers: 4

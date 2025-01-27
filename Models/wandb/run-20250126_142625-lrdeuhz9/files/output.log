@@ -1,0 +1,121 @@
+[I 2025-01-26 14:26:26,689] A new study created in memory with name: no-name-91a78706-0030-4817-be50-a1f53eef1128
+/tmp/ipykernel_443148/1011961262.py:43: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform("lr0", 1e-4, 1e-2)
+New https://pypi.org/project/ultralytics/8.3.68 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.59 🚀 Python-3.9.21 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 4060 Laptop GPU, 8188MiB)
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11n.pt, data=updated_config.yml, epochs=10, time=None, patience=100, batch=24, imgsz=320, save=True, save_period=-1, cache=False, device=[0], workers=4, project=None, name=train2, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.005155292008968721, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train2
+Overriding model.yaml nc=80 with nc=7
+
+                   from  n    params  module                                       arguments
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 13                  -1  1    111296  ultralytics.nn.modules.block.C3k2            [384, 128, 1, False]
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 16                  -1  1     32096  ultralytics.nn.modules.block.C3k2            [256, 64, 1, False]
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 19                  -1  1     86720  ultralytics.nn.modules.block.C3k2            [192, 128, 1, False]
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 22                  -1  1    378880  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True]
+ 23        [16, 19, 22]  1    432037  ultralytics.nn.modules.head.Detect           [7, [64, 128, 256]]
+YOLO11n summary: 319 layers, 2,591,205 parameters, 2,591,189 gradients, 6.4 GFLOPs
+
+Transferred 448/499 items from pretrained weights
+DVCLive is detected and auto logging is enabled (run 'yolo settings dvc=False' to disable).
+Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+train: Scanning /home/nic/workspace/Mlops/MHD_1/KIIT-MiTA/train/labels.cache... 1360 images, 0 backgrounds, 0 corrupt: 100%|██████████| 1360/1360 [00:00<?, ?it/s]
+val: Scanning /home/nic/workspace/Mlops/MHD_1/KIIT-MiTA/valid/labels.cache... 170 images, 0 backgrounds, 0 corrupt: 100%|██████████| 170/170 [00:00<?, ?it/s]
+Plotting labels to runs/detect/train2/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.005155292008968721' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=0.000909, momentum=0.9) with parameter groups 81 weight(decay=0.0), 88 weight(decay=0.0005625000000000001), 87 bias(decay=0.0)
+[34m[1mMLflow: [0mlogging run_id(fe4d9ec38a134955a8f6b23fd395bfda) to http://192.168.29.161:8087
+[34m[1mMLflow: [0mdisable with 'yolo settings mlflow=False'
+Image sizes 320 train, 320 val
+Using 4 dataloader workers
+Logging results to [1mruns/detect/train2[0m
+Starting training for 10 epochs...
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/10         1G       1.49      3.622      1.254         47        320: 100%|██████████| 57/57 [00:08<00:00,  6.55it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  4.37it/s]
+                   all        170        456    0.00426      0.516      0.077     0.0423
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/10     0.979G      1.547      2.644       1.27         54        320: 100%|██████████| 57/57 [00:04<00:00, 13.92it/s] 
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  6.26it/s]
+                   all        170        456      0.282      0.206      0.193      0.109
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/10     0.977G      1.567      2.404      1.298         26        320: 100%|██████████| 57/57 [00:06<00:00,  9.04it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  6.00it/s]
+                   all        170        456      0.293      0.346      0.232      0.121
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/10     0.971G      1.541      2.281      1.271         25        320: 100%|██████████| 57/57 [00:06<00:00,  9.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  5.85it/s]
+                   all        170        456      0.279      0.423      0.256      0.129
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/10     0.979G      1.478      2.098      1.225         35        320: 100%|██████████| 57/57 [00:05<00:00,  9.52it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  5.72it/s]
+                   all        170        456      0.402      0.327      0.292      0.164
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/10     0.986G      1.427      1.999      1.193         70        320: 100%|██████████| 57/57 [00:03<00:00, 16.08it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  5.51it/s]
+                   all        170        456      0.458      0.378      0.375      0.214
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/10     0.979G      1.378      1.862      1.171         26        320: 100%|██████████| 57/57 [00:07<00:00,  7.62it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  6.70it/s]
+                   all        170        456      0.476      0.449      0.414      0.233
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/10     0.979G      1.343      1.769      1.148         32        320: 100%|██████████| 57/57 [00:06<00:00,  9.21it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  6.18it/s]
+                   all        170        456      0.465      0.459       0.43      0.248
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/10     0.979G      1.264      1.643      1.107         49        320: 100%|██████████| 57/57 [00:05<00:00,  9.51it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  6.51it/s]
+                   all        170        456      0.484       0.48      0.447      0.267
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/10     0.979G       1.24      1.559      1.092         38        320: 100%|██████████| 57/57 [00:03<00:00, 14.28it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  5.80it/s]
+                   all        170        456      0.556      0.453      0.486      0.296
+
+10 epochs completed in 0.020 hours.
+Optimizer stripped from runs/detect/train2/weights/last.pt, 5.4MB
+Optimizer stripped from runs/detect/train2/weights/best.pt, 5.4MB
+
+Validating runs/detect/train2/weights/best.pt...
+Ultralytics 8.3.59 🚀 Python-3.9.21 torch-2.5.1+cu124 CUDA:0 (NVIDIA GeForce RTX 4060 Laptop GPU, 8188MiB)
+YOLO11n summary (fused): 238 layers, 2,583,517 parameters, 0 gradients, 6.3 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:01<00:00,  2.25it/s]
+                   all        170        456      0.557      0.453      0.486      0.296
+              Artilary         19         26      0.435      0.346      0.356      0.207
+               Missile         25         44      0.641      0.409      0.501      0.322
+                 Radar         27         30      0.408      0.467      0.378      0.213
+    M. Rocket Launcher         28         38      0.701      0.421      0.571      0.455
+               Soldier         35        108      0.549      0.372      0.418      0.186
+                  Tank         37         94      0.641      0.585      0.677      0.405
+               Vehicle         47        116      0.525      0.569        0.5      0.283
+Speed: 0.2ms preprocess, 0.8ms inference, 0.0ms loss, 3.9ms postprocess per image
+Results saved to [1mruns/detect/train2[0m

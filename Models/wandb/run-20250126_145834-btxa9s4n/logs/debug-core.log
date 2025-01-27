@@ -1,0 +1,6 @@
+{"time":"2025-01-26T14:58:34.236341111Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpmrfybhpe/port-11605.txt","pid":11605,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-01-26T14:58:34.238698204Z","level":"INFO","msg":"Will exit if parent process dies.","ppid":11605}
+{"time":"2025-01-26T14:58:34.238976401Z","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":42001,"Zone":""}}
+{"time":"2025-01-26T14:58:34.369630583Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:51692"}
+{"time":"2025-01-26T14:58:34.377558086Z","level":"INFO","msg":"handleInformInit: received","streamId":"btxa9s4n","id":"127.0.0.1:51692"}
+{"time":"2025-01-26T14:58:34.600782867Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"btxa9s4n","id":"127.0.0.1:51692"}

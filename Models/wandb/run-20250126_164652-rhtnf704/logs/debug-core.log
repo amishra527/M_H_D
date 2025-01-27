@@ -1,0 +1,9 @@
+{"time":"2025-01-26T16:46:52.690449386Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpyxiyjans/port-134617.txt","pid":134617,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-01-26T16:46:52.692706936Z","level":"INFO","msg":"Will exit if parent process dies.","ppid":134617}
+{"time":"2025-01-26T16:46:52.692971274Z","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":46803,"Zone":""}}
+{"time":"2025-01-26T16:46:52.82968496Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:51564"}
+{"time":"2025-01-26T16:46:52.835070603Z","level":"INFO","msg":"handleInformInit: received","streamId":"rhtnf704","id":"127.0.0.1:51564"}
+{"time":"2025-01-26T16:46:53.058855176Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"rhtnf704","id":"127.0.0.1:51564"}
+{"time":"2025-01-26T21:24:01.843951447Z","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"rhtnf704","id":"127.0.0.1:51564"}
+{"time":"2025-01-26T21:24:01.845111683Z","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"rhtnf704","id":"127.0.0.1:51564"}
+{"time":"2025-01-26T21:54:37.245313469Z","level":"INFO","msg":"Parent process exited, terminating service process."}

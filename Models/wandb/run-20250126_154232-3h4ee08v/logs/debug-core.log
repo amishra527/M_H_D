@@ -1,0 +1,9 @@
+{"time":"2025-01-26T15:42:32.905888924Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpocrrpenr/port-52266.txt","pid":52266,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-01-26T15:42:32.908269257Z","level":"INFO","msg":"Will exit if parent process dies.","ppid":52266}
+{"time":"2025-01-26T15:42:32.908248058Z","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33183,"Zone":""}}
+{"time":"2025-01-26T15:42:33.052852101Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:37998"}
+{"time":"2025-01-26T15:42:33.057456465Z","level":"INFO","msg":"handleInformInit: received","streamId":"3h4ee08v","id":"127.0.0.1:37998"}
+{"time":"2025-01-26T15:42:33.279416743Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"3h4ee08v","id":"127.0.0.1:37998"}
+{"time":"2025-01-26T16:17:57.85128769Z","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"3h4ee08v","id":"127.0.0.1:37998"}
+{"time":"2025-01-26T16:17:57.853088914Z","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"3h4ee08v","id":"127.0.0.1:37998"}
+{"time":"2025-01-26T16:47:17.163480312Z","level":"INFO","msg":"Parent process exited, terminating service process."}
