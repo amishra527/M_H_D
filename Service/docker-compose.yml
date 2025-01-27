@@ -4,13 +4,13 @@ services:
   military-hardware-detection:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: app/Dockerfile
     container_name: military-hardware-detection-api
     ports:
-      - "8000:8000"
+      - "10002:10002"
     volumes:
-      - ./swagger-ui:/app/swagger-ui  # Mount the Swagger UI folder to ensure offline docs are served
+      - ./app:/app  # Mount to the correct directory
     environment:
       - PYTHONUNBUFFERED=1  # Ensures real-time log output
     restart: always  # Ensures the container restarts automatically in case of a failure
-
+    command: uvicorn main_12_asset:app --reload --host 0.0.0.0 --port 10002
